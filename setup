@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Pre requisites:
+
+# sudo apt update
+# sudo apt-get install build-essential
+# sudo apt install git -y
+# sudo apt install curl
+
+
+# Symbolic links
+ln -sf "$PWD/.bash_profile" "$HOME"/.bash_profile
+ln -sf "$PWD/.bashrc" "$HOME"/.bashrc
+
+# Install brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+brew install go
+
+# go install github.com/open-pomodoro/openpomodoro-cli/cmd/pomodoro@latest
+# https://github.com/open-pomodoro/openpomodoro-cli
+
